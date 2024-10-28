@@ -68,7 +68,7 @@ const Intro = () => {
           <h1 className='mb-10 mt-4 px-4 text-2xl sm:text-4xl'>
             <span className='font-medium !leading-[1.5]'>Rodgers Munene</span>{" "}
             <p className='text-[14px]'>
-              A seasoned software developer with 4 years of experience.
+            Bringing ideas to life with clean code, smart design, and data-driven insights.
             </p>
           </h1> 
         </Fade>
