@@ -57,7 +57,7 @@ const About = () => {
                 <Fade direction='up' delay={1000} cascade damping={1e-1} triggerOnce={true}>
                   <p className='mt-2 leading-relaxed text-sm test-gray-700
                   dark:text-white/70'>
-                    I the use this information to create a custom website that not only reflects your
+                    I use this information to create a custom website that not only reflects your
                     brand but also helps you achieve you business objective. From responsive design
                     to intuitive navigation. I focus on every detail.
                   </p>
