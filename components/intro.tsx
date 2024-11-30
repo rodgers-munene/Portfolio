@@ -37,7 +37,7 @@ const Intro = () => {
                 }}
                 >
                     <Image 
-                    src="/boy.png"
+                    src="/portfolio.png"
                     width={350}
                     height={350}
                     alt='portrait'
