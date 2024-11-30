@@ -30,9 +30,9 @@ export const links: Link[] = [
 
 export const projectData: ProjectInfo[] = [
     {
-        title: "Snowlake Theme",
+        title: "FilmSage",
         description: 
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolaro magna aliqua",
+        "FilmSage is your ultimate movie companion, delivering AI-powered recommendations tailored to your unique taste.",
         tags: ["React", "Next.Js", "MongoDB", "Tailwind", "NodeJs"],
         imageUrl: "/image1.png",
         link: "https://www.google.com"
