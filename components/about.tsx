@@ -58,8 +58,8 @@ const About = () => {
                 <Fade direction='up' delay={800} cascade damping={1e-1} triggerOnce={true}>
                   <p className='mt-2 leading-relaxed text-sm test-gray-700
                   dark:text-white/70'>
-                    When I'm not coding, I explore creative projects, experimenting with new technologies,
-                    and cultivating my passion for <span className='text-blue-700'>machine learning</span> and <span className='text-blue-700'>software development simulations</span> . Let’s collaborate 
+                    When I am not coding, I explore creative projects, experimenting with new technologies,
+                    and cultivating my passion for <span className='text-blue-700'>machine learning</span> and <span className='text-blue-700'>software development simulations</span> . Let us collaborate 
                     to create something extraordinary!
                   </p>
                 </Fade>
