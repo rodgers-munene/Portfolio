@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import ThemeSwitch from "@/components/theme-controller";
 import Footer from "@/components/footer";
 
+
 const sora = Sora({
   subsets: ["latin"],
   variable: '--font-sora',
@@ -15,6 +16,9 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: "Rodgers Munene",
   description: "This is my portfolio",
+  icons: {
+     icon: '/favicon.ico',
+     },
 };
 
 export default function RootLayout({
@@ -24,6 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
+     
       <body
         className={`${sora.variable} font-Sora flex flex-col bg-gray-200
         text-gray-950 relative dark:bg-gray-900 dark:text-gray-50
