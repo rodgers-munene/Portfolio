@@ -9,7 +9,6 @@ import { useSectionInView } from '@/lib/useInView'
 
 const Projects = () => {
    
-  const ref = useSectionInView('#projects', 0.1)
   return (
         <section
         id='projects'

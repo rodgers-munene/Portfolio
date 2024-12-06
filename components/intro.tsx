@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { BsLinkedin } from 'react-icons/bs'
 import { FaGithubSquare } from 'react-icons/fa'
-import { Mail } from 'lucide-react'
 
 // Animations
 import { Fade } from 'react-awesome-reveal'
@@ -16,7 +15,6 @@ import { useActiveSectionContext } from '@/containers/active-section'
 const Intro = () => {
 
   const { ref } = useSectionInView("#home", 0.5)
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
