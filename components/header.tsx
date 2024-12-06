@@ -41,8 +41,8 @@ const Header = ( {links}: HeaderProps ) => {
 
 
   return (
-    <header className={`hidden md:flex items-center justify-center fixed z-[999] w-full mt-1 
-    transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-[110%]'}`}>
+    <header className={`hidden md:flex items-center justify-center fixed z-[999] w-full mt-5 
+    transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-[135%]'}`}>
       <motion.div
       initial={{y: -100, opacity: 0}}
       animate={{y: 0, opacity: 1}}
