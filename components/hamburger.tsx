@@ -75,6 +75,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ( { links } ) => {
                          href={link.hash}
                          onClick={() =>{
                           setActiveSection(link.hash)
+                          setIsOpen(false)
                           setTimeOfLastClick(Date.now())
                          }}
                          >

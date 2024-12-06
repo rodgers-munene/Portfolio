@@ -37,11 +37,11 @@ const About = () => {
             <div className='text-lg mt-12 xl:mt-3'>
               <div className='flex justify-start flex-col'>
 
-                <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
+                <Fade direction='up' delay={300} cascade damping={1e-1} triggerOnce={true}>
                   <h3 className='font-bold mt-6'>What I do...</h3>  
                 </Fade>
                 
-                <Fade direction='up' delay={600} cascade damping={1e-1} triggerOnce={true}>
+                <Fade direction='up' delay={400} cascade damping={1e-1} triggerOnce={true}>
                   <p className='mt-2 leading-relaxed text-sm test-gray-700
                   dark:text-white/70'>
                     I am a passionate software developer dedicated to crafting seamless,
@@ -51,11 +51,11 @@ const About = () => {
                   </p>
                 </Fade>
                 
-                <Fade direction='up' delay={800} cascade damping={1e-1} triggerOnce={true}>
+                <Fade direction='up' delay={600} cascade damping={1e-1} triggerOnce={true}>
                   <h3 className='font-bold mt-6'>In My Free Time...</h3>
                 </Fade>
 
-                <Fade direction='up' delay={1000} cascade damping={1e-1} triggerOnce={true}>
+                <Fade direction='up' delay={800} cascade damping={1e-1} triggerOnce={true}>
                   <p className='mt-2 leading-relaxed text-sm test-gray-700
                   dark:text-white/70'>
                     When I'm not coding, I explore creative projects, experimenting with new technologies,

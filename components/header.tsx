@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import NextLink from 'next/link'
 import clsx from "clsx"
 import { Link } from "@/lib/types"
@@ -16,11 +16,33 @@ type HeaderProps = {
 
 const Header = ( {links}: HeaderProps ) => {
   const {activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
+  const [showHeader, setShowHeader] = useState(true);
+   const [lastScrollY, setLastScrollY] = useState(0);
+
+  //  function to hide the header on scroll up and show the header on scroll down
+
+  const handleScroll = () => {
+     const currentScrollY = window.scrollY;
+     if (currentScrollY > lastScrollY)
+       { // Scrolling down 
+        setShowHeader(false); 
+       } else {
+         // Scrolling up
+        setShowHeader(true); 
+      } setLastScrollY(currentScrollY);
+     }; 
+     
+     useEffect(() => {
+       window.addEventListener('scroll', handleScroll);
+       return () => { 
+        window.removeEventListener('scroll', handleScroll);
+       };
+     }, [lastScrollY]);
 
 
   return (
-    <header className='hidden md:flex items-center justify-center
-    fixed z-[999] w-full mt-4'>
+    <header className={`hidden md:flex items-center justify-center fixed z-[999] w-full mt-1 
+    transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-[110%]'}`}>
       <motion.div
       initial={{y: -100, opacity: 0}}
       animate={{y: 0, opacity: 1}}
