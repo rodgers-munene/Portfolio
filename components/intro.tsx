@@ -10,7 +10,6 @@ import { FaGithubSquare } from 'react-icons/fa'
 import { Fade } from 'react-awesome-reveal'
 import { motion } from 'framer-motion'
 import { useSectionInView } from '@/lib/useInView'
-import { useActiveSectionContext } from '@/containers/active-section'
 
 const Intro = () => {
 

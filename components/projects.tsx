@@ -4,7 +4,6 @@ import React from 'react'
 import SectionHeading from './section-heading'
 import { projectData } from '@/lib/data'
 import Project from './project-card'
-import { useSectionInView } from '@/lib/useInView'
 
 
 const Projects = () => {
