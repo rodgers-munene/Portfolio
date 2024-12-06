@@ -2,6 +2,7 @@ import Image from "next/image"
 import { ProjectInfo } from '@/lib/types'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from "react"
+import Link from 'next/link'
 
 type ProjectProps = ProjectInfo;
 
@@ -28,6 +29,7 @@ export default function Project( {
             opacity: opacityProgress
         }}
         className="group mb-3 sm:mb-8 last:mb-0">
+            <Link href={link} target="__blank_">
             <section className="bg-white max-w-[42rem] border border-black/5
             rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] 
             hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white
@@ -73,6 +75,7 @@ export default function Project( {
                 "
                 /> 
             </section>
+            </Link>
         </motion.div>
     )
 }

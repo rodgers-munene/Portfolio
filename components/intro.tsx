@@ -38,8 +38,8 @@ const Intro = () => {
                 >
                     <Image 
                     src="/portfolio.png"
-                    width={350}
-                    height={350}
+                    width={310}
+                    height={310}
                     alt='portrait'
                     quality={100}
                     priority

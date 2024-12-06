@@ -68,7 +68,7 @@ const About = () => {
           </div>
 
           {/* Right Image*/}
-          <div>
+          <div className='flex justify-center'>
             <Fade direction='right' delay={1000} cascade damping={1e-1} triggerOnce={true}>
               <Image
               src="/rodgers.png"

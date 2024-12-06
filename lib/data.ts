@@ -34,32 +34,32 @@ export const projectData: ProjectInfo[] = [
         description: 
         "FilmSage is your ultimate movie companion, delivering AI-powered recommendations tailored to your unique taste.",
         tags: ["React", "Next.Js", "MongoDB", "Tailwind", "NodeJs"],
-        imageUrl: "/image1.png",
-        link: "https://www.google.com"
+        imageUrl: "/image.png",
+        link: "https://github.com/rodgers-munene/filmsage"
     },
     {
-        title: "Budget App",
+        title: "E-commerce App",
         description: 
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolaro magna aliqua",
+        "Pickify is your go-to e-commerce platform, offering a curated selection of products just for you.",
         tags: ["React", "Next.Js", "MongoDB", "Tailwind", "NodeJs"],
-        imageUrl: "/image2.png",
-        link: "https://www.google.com"
+        imageUrl: "/e-commerce.jpg",
+        link: "https://github.com/rodgers-munene/products"
     },
     {
-        title: "Storage App",
+        title: "KLIN E-Waste System",
         description: 
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolaro magna aliqua",
+        "KLIN is your trusted waste management system, providing efficient and sustainable solutions to keep your environment clean and green.",
         tags: ["React", "Next.Js", "MongoDB", "Tailwind", "NodeJs"],
-        imageUrl: "/image3.png",
-        link: "https://www.google.com"
+        imageUrl: "/klin.jpg",
+        link: "https://github.com/rodgers-munene/KLIN-Waste-Management/"
     },
     {
-        title: "Missio Theme",
+        title: "MyAsset",
         description: 
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolaro magna aliqua",
+        "MyAsset is your ultimate asset management system, an efficient way to track and manage your resources with ease and precision.",
         tags: ["React", "Next.Js", "MongoDB", "Tailwind", "NodeJs"],
-        imageUrl: "/image4.png",
-        link: "https://www.google.com"
+        imageUrl: "/asset.jpg",
+        link: "https://github.com/rodgers-munene/MyAsset"
     },
 ];
 
