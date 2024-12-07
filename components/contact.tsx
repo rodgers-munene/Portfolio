@@ -18,14 +18,15 @@ export default function Contact() {
     Message: '',
   })
 
-  const handleChange = (e: any) => {
-    setContactData({ ...contactData, [e.target.name]: e.target.value });
+  const handleChange = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.currentTarget;
+    setContactData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    const formData = new FormData(e.target)
+    const formData = new FormData(e.currentTarget)
 
     formData.append("access_key", "e87aff9b-5349-4c04-b954-7acc473c5348")
 

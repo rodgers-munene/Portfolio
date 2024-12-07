@@ -3,13 +3,14 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BsLinkedin, BsMailbox} from 'react-icons/bs'
-import { FaGithubSquare } from 'react-icons/fa'
+import { BsLinkedin } from 'react-icons/bs'
+import { FaGithubSquare} from 'react-icons/fa'
 
 // Animations
 import { Fade } from 'react-awesome-reveal'
 import { motion } from 'framer-motion'
 import { useSectionInView } from '@/lib/useInView'
+
 
 const Intro = () => {
 
@@ -98,7 +99,7 @@ const Intro = () => {
           active:scale-105 transition cursor-pointer borderBlack 
           dark:bg-white/10 dark:text-white/60'
           target='_blank'>
-            <BsMailbox />
+            <BsLinkedin />
           </a>
 
           <a href="https://github.com/rodgers-munene"
