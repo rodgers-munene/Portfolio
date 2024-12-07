@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BsLinkedin } from 'react-icons/bs'
+import { BsLinkedin, BsMailbox} from 'react-icons/bs'
 import { FaGithubSquare } from 'react-icons/fa'
 
 // Animations
@@ -98,7 +98,7 @@ const Intro = () => {
           active:scale-105 transition cursor-pointer borderBlack 
           dark:bg-white/10 dark:text-white/60'
           target='_blank'>
-            <BsLinkedin />
+            <BsMailbox />
           </a>
 
           <a href="https://github.com/rodgers-munene"

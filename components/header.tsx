@@ -37,7 +37,7 @@ const Header = ( {links}: HeaderProps ) => {
        return () => { 
         window.removeEventListener('scroll', handleScroll);
        };
-     }, [lastScrollY, handleScroll]);
+     }, [lastScrollY]);
 
 
   return (

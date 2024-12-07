@@ -5,34 +5,52 @@ import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/useInView";
 import SubmitBtn from "./submit-btn";
-import { SendEmail } from "@/utils/sendEmail";
 import Notifications from "./notifications";
 
 export default function Contact() {
   const { ref } = useSectionInView("#contact");
-  const [ email, setEmail ] = useState('')
-  const [ message, setMessage ] = useState("")
   const [ loading, setLoading ] = useState(false)
   const [ successMessage, setSuccessMessage ] = useState("")
   const [ errorMessage, setErrorMessage ] = useState('')
+  const [contactData, setContactData] = useState({
+    Name: '',
+    Email: '',
+    Message: '',
+  })
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleChange = (e: any) => {
+    setContactData({ ...contactData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setLoading(true);
+    const formData = new FormData(e.target)
 
-    try {
-      await SendEmail(email, message);
-      setSuccessMessage('Email sent successfully!')
-      setErrorMessage("")
-      console.log(successMessage)
+    formData.append("access_key", "e87aff9b-5349-4c04-b954-7acc473c5348")
 
-    } catch (error) {
-      setErrorMessage('Failed to send Message');
-      console.error(error)
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
-    }finally {
-      setLoading(false)
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    });
+    const result = await response.json();
+    if (result.success) {
+        setSuccessMessage('Email sent successfully!')
+        setErrorMessage("")
+    }else{
+      setErrorMessage('Failed to send Message!')
     }
+    
+    setLoading(false)
+    setContactData({Name: '', Email: '', Message: ''}) // clear the form data
+
   }
 
   useEffect(() => {
@@ -79,27 +97,41 @@ export default function Contact() {
       <form
         className="mt-10 flex flex-col dark:text-black"
         onSubmit={handleSubmit}
+        id="myForm"
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:text-white dark:bg-white dark:bg-opacity-20 dark:focus:bg-opacity-10 transition-all dark:outline-none"
-          name="senderEmail"
+          className="h-14 px-4 mb-2 rounded-lg borderBlack dark:text-white dark:bg-white dark:bg-opacity-20 dark:focus:bg-opacity-10 transition-all dark:outline-none"
+          name="Name"
+          type="name"
+          required
+          maxLength={200}
+          value={contactData.Name}
+          onChange={handleChange}
+          placeholder={"Your Name"}
+        />
+
+        <input
+          className="h-14 px-4 rounded-lg mt-1 borderBlack dark:text-white dark:bg-white dark:bg-opacity-20 dark:focus:bg-opacity-10 transition-all dark:outline-none"
+          name="Email"
           type="email"
           required
           maxLength={500}
+          value={contactData.Email}
+          onChange={handleChange}
           placeholder={"Your email"}
-          onChange={ (e) => setEmail(e.target.value)}
         />
         <textarea
           className="h-52 my-3 rounded-lg resize-none borderBlack p-4 dark:text-white dark:bg-white dark:bg-opacity-20 dark:focus:bg-opacity-10 transition-all dark:outline-none"
-          name="message"
+          name="Message"
+          value={contactData.Message}
+          onChange={handleChange}
           placeholder={
             "Your Message"
           }
           required
-          maxLength={5000}
-          onChange={(e) => setMessage(e.target.value)}
+          maxLength={5000} 
         />
-        <SubmitBtn text={loading ? "sending": "Submit"}  />
+        <SubmitBtn text={loading ? "sending": "Submit" }  />
       </form>
     </motion.section>
   );
